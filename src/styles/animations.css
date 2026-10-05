@@ -1,0 +1,245 @@
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 16px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.2);
+    border-color: rgba(34, 197, 94, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+    border-color: rgba(34, 197, 94, 0.65);
+  }
+}
+
+@keyframes radarBlink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+@keyframes blinkCursor {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes floatSmooth {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+@keyframes scanLaser {
+  0% {
+    top: 0%;
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.7;
+  }
+}
+
+/* Cyber Matrix Background Canvas */
+.cyber-canvas-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.45;
+  will-change: transform;
+}
+
+/* Ambient Cursor Spotlight - Hardware accelerated */
+.cursor-spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, rgba(124, 58, 237, 0.04) 50%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+}
+
+/* Loading Screen Animation */
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  background: #050B14;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.loader-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-logo-box {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #0B1628, #0E1B31);
+  border: 1.5px solid var(--bright-blue);
+  box-shadow: 0 0 25px rgba(37, 99, 235, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--electric-blue);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.loader-progress-track {
+  width: 220px;
+  height: 3.5px;
+  background: #0E1B31;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 16px;
+  position: relative;
+}
+
+.loader-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--bright-blue), var(--neon-cyan), var(--neon-purple));
+  box-shadow: 0 0 8px var(--bright-blue);
+  transition: width 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Typewriter Cursor */
+.typewriter-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.05em;
+  background-color: var(--bright-blue);
+  margin-left: 4px;
+  vertical-align: -0.1em;
+  animation: blinkCursor 0.9s infinite;
+  box-shadow: 0 0 6px var(--bright-blue);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .section-wrapper {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .album-3d-stage {
+    min-height: 440px;
+  }
+
+  .album-card-wrapper.prev {
+    transform: translate3d(-42%, 0, -35px) scale(0.82) rotateY(15deg);
+  }
+
+  .album-card-wrapper.next {
+    transform: translate3d(42%, 0, -35px) scale(0.82) rotateY(-15deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-wrapper {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+  }
+
+  .stat-item:nth-child(2)::after {
+    display: none;
+  }
+
+  .album-3d-stage {
+    min-height: 430px;
+    padding: 16px 0;
+  }
+
+  .album-card-wrapper {
+    max-width: 92%;
+  }
+
+  .album-card-wrapper.prev {
+    transform: translate3d(-32%, 0, -40px) scale(0.78) rotateY(12deg);
+    opacity: 0.45;
+  }
+
+  .album-card-wrapper.next {
+    transform: translate3d(32%, 0, -40px) scale(0.78) rotateY(-12deg);
+    opacity: 0.45;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .album-3d-stage {
+    min-height: 400px;
+  }
+
+  .album-card-wrapper.prev {
+    transform: translate3d(-24%, 0, -30px) scale(0.74);
+    opacity: 0.25;
+  }
+
+  .album-card-wrapper.next {
+    transform: translate3d(24%, 0, -30px) scale(0.74);
+    opacity: 0.25;
+  }
+}

@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="50%" stop-color="#081A2A"/>
+      <stop offset="100%" stop-color="#050B14"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#0891B2"/>
+    </linearGradient>
+    <filter id="glow4" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="url(#bg4)"/>
+
+  <!-- Pulse Rings -->
+  <circle cx="400" cy="220" r="210" stroke="#0891B2" stroke-width="1" stroke-dasharray="4,6" fill="none" opacity="0.3"/>
+  <circle cx="400" cy="220" r="150" stroke="#06B6D4" stroke-width="1.5" fill="none" opacity="0.4"/>
+
+  <!-- Event Header Glass Card -->
+  <rect x="50" y="45" width="700" height="75" rx="14" fill="#0A182E" stroke="#06B6D4" stroke-width="1.5" filter="url(#glow4)"/>
+  <text x="80" y="80" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold">COLLEGE SYMPOSIUM 2026 // LIVE EVENT</text>
+  <text x="80" y="105" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="18" font-weight="bold">CampusPulse: HackNova Tech Summit</text>
+
+  <!-- Live Countdown Boxes -->
+  <g transform="translate(480, 58)">
+    <rect x="0" y="0" width="55" height="50" rx="8" fill="#050B14" stroke="#1E3A5F" stroke-width="1"/>
+    <text x="27" y="28" fill="#22D3EE" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="bold" text-anchor="middle">04</text>
+    <text x="27" y="42" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">DAYS</text>
+
+    <rect x="62" y="0" width="55" height="50" rx="8" fill="#050B14" stroke="#1E3A5F" stroke-width="1"/>
+    <text x="89" y="28" fill="#22D3EE" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="bold" text-anchor="middle">12</text>
+    <text x="89" y="42" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">HOURS</text>
+
+    <rect x="124" y="0" width="55" height="50" rx="8" fill="#050B14" stroke="#1E3A5F" stroke-width="1"/>
+    <text x="151" y="28" fill="#22D3EE" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="bold" text-anchor="middle">45</text>
+    <text x="151" y="42" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">MINS</text>
+
+    <rect x="186" y="0" width="55" height="50" rx="8" fill="#050B14" stroke="#06B6D4" stroke-width="1"/>
+    <text x="213" y="28" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="bold" text-anchor="middle">18</text>
+    <text x="213" y="42" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="8" text-anchor="middle">SECS</text>
+  </g>
+
+  <!-- Left: RSVP & Capacity Telemetry -->
+  <rect x="50" y="140" width="410" height="200" rx="14" fill="#0B172A" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="75" y="172" fill="#E2E8F0" font-family="Inter, sans-serif" font-size="15" font-weight="bold">Real-time RSVP Registration Hub</text>
+  
+  <text x="75" y="200" fill="#94A3B8" font-family="Inter, sans-serif" font-size="12">Auditorium Capacity: 320 / 350 Registered</text>
+  <!-- Progress Bar -->
+  <rect x="75" y="215" width="360" height="12" rx="6" fill="#1E293B"/>
+  <rect x="75" y="215" width="330" height="12" rx="6" fill="url(#cyanGlow2)" filter="url(#glow4)"/>
+
+  <text x="75" y="255" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11">● Team Size: 3-4 Members</text>
+  <text x="240" y="255" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11">● Fee: Verified Free</text>
+
+  <rect x="75" y="278" width="160" height="42" rx="8" fill="url(#cyanGlow2)"/>
+  <text x="155" y="304" fill="#050B14" font-family="Inter, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">⚡ RSVP Now</text>
+
+  <rect x="250" y="278" width="185" height="42" rx="8" fill="#0F172A" stroke="#2563EB" stroke-width="1"/>
+  <text x="342" y="304" fill="#60A5FA" font-family="Inter, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Coordinator Portal</text>
+
+  <!-- Right: Holographic QR Pass Card -->
+  <rect x="480" y="140" width="270" height="200" rx="14" fill="#081324" stroke="#06B6D4" stroke-width="1.5" filter="url(#glow4)"/>
+  <text x="615" y="170" fill="#22D3EE" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" text-anchor="middle">DIGITAL QR ENTRY PASS</text>
+  
+  <!-- Stylized QR Grid -->
+  <g transform="translate(565, 185)">
+    <rect x="0" y="0" width="100" height="100" rx="8" fill="#FFFFFF"/>
+    <!-- Simulated QR Finder Patterns -->
+    <rect x="8" y="8" width="26" height="26" fill="#050B14"/>
+    <rect x="13" y="13" width="16" height="16" fill="#FFFFFF"/>
+    <rect x="17" y="17" width="8" height="8" fill="#050B14"/>
+
+    <rect x="66" y="8" width="26" height="26" fill="#050B14"/>
+    <rect x="71" y="13" width="16" height="16" fill="#FFFFFF"/>
+    <rect x="75" y="17" width="8" height="8" fill="#050B14"/>
+
+    <rect x="8" y="66" width="26" height="26" fill="#050B14"/>
+    <rect x="13" y="71" width="16" height="16" fill="#FFFFFF"/>
+    <rect x="17" y="75" width="8" height="8" fill="#050B14"/>
+
+    <!-- QR Data Dots -->
+    <rect x="42" y="12" width="6" height="6" fill="#050B14"/>
+    <rect x="52" y="20" width="6" height="6" fill="#050B14"/>
+    <rect x="42" y="42" width="16" height="16" fill="#050B14"/>
+    <rect x="66" y="45" width="8" height="8" fill="#050B14"/>
+    <rect x="20" y="45" width="8" height="8" fill="#050B14"/>
+    <rect x="45" y="72" width="12" height="12" fill="#050B14"/>
+    <rect x="68" y="72" width="18" height="18" fill="#050B14"/>
+  </g>
+  <text x="615" y="315" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">PASS ID: CP-2026-8941</text>
+  <text x="615" y="330" fill="#22C55E" font-family="'JetBrains Mono', monospace" font-size="9" text-anchor="middle">✓ SCAN AT MAIN AUDITORIUM</text>
+
+  <!-- Bottom Architecture Flow -->
+  <g transform="translate(50, 365)">
+    <rect x="0" y="0" width="120" height="32" rx="8" fill="#0F172A" stroke="#06B6D4" stroke-width="1"/>
+    <text x="60" y="20" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">React UI</text>
+    
+    <text x="140" y="20" fill="#64748B" font-size="14">→</text>
+
+    <rect x="160" y="0" width="140" height="32" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1"/>
+    <text x="230" y="20" fill="#FBBF24" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">Firebase DB</text>
+
+    <text x="320" y="20" fill="#64748B" font-size="14">→</text>
+
+    <rect x="340" y="0" width="140" height="32" rx="8" fill="#0F172A" stroke="#22C55E" stroke-width="1"/>
+    <text x="410" y="20" fill="#86EFAC" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">Event Registration</text>
+
+    <text x="500" y="20" fill="#64748B" font-size="14">→</text>
+
+    <rect x="520" y="0" width="140" height="32" rx="8" fill="#0F172A" stroke="#A855F7" stroke-width="1"/>
+    <text x="590" y="20" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="11" text-anchor="middle">QR Entry Pass</text>
+  </g>
+</svg>
